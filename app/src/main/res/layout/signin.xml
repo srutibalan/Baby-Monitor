@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+    android:background="@drawable/back"
+        >
+     <EditText
+        android:id="@+id/email_id"
+         android:background="@android:drawable/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Email id"
+        android:maxLength="40"
+        android:inputType="textEmailAddress" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/phone"
+        android:background="@android:drawable/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/email_id"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="Mobile No."
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phone"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:maxLength="30"
+        android:background="@android:drawable/edit_text"
+        android:hint="Name"
+        android:inputType="textPersonName">
+        <requestFocus />
+      </EditText>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email_id"
+        android:layout_alignRight="@+id/email_id"
+        android:layout_below="@+id/email_id"
+        android:addStatesFromChildren="true"
+        android:background="@android:drawable/edit_text"
+        android:baselineAligned="false"
+        android:id="@+id/rl"
+        android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/show_hide"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/show"
+                 />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/show_hide"
+                android:background="@null"
+                android:ems="10"
+                android:maxLength="40"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+    <Button
+        android:background="@drawable/buttton"
+        style="@style/buttonStyle"
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Signed up? Click to Log in Now!"
+        android:onClick="action"
+        android:textSize="20sp"/>
+
+    <Button
+        android:background="@drawable/buttton"
+        style="@style/buttonStyle"
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rl"
+        android:layout_alignRight="@+id/rl"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="10dp"
+        android:text="Continue.."
+        android:onClick="action"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/flogo"
+        android:id="@+id/imageView6"
+        android:layout_below="@+id/login"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
